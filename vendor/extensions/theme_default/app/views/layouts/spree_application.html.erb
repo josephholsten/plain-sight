@@ -15,15 +15,26 @@ if @body_class.nil?
 end
  %>
 <body class="<%= @body_class %>"<%= %( id="#{@body_id}") if @body_id %>>
-  <div id="header" class="container">                                                          
-    <div id="login-bar">          
+  <div id="header" class="container">
+    <div id="nav">
+      <ul>
+        <li><a href="http://doubleshotcoffee.com/">DoubleShot</a></li>
+        <li>Buy Coffee</li>
+        <li><a href="http://doubleshotcoffee.com/Roasting.html">Roasting</a></li>
+        <li><a href="http://doubleshotcoffee.com/2Contact.html">2Contact</a></li>
+        <li><a href="http://doubleshotcoffee.com/Propaganda.html">Propaganda</a></li>
+        <li><a href="http://doubleshotcoffee.com/Wholesale.html">Wholesale</a></li>
+        <li><a href="http://blog.doubleshotcoffee.com">Blog</a></li>
+      </ul>
+    </div>
+    <div id="login-bar">
       <ul id="nav-bar">
         <%= render 'shared/nav_bar' %>
       </ul>
     </div>
 	<%= logo %>
   </div>
-  <div id="wrapper" class="container"> 
+  <div id="wrapper" class="container">
     <% if @content_for_sidebar %>
     <div id="sidebar">
       <% hook :sidebar do %>
